@@ -1,0 +1,17 @@
+<html>
+<head>
+	<title>Главное меню</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='menu_style.css') }}">
+</head>
+<body style="background: no-repeat top/100% url('/static/images/background.jpg');">
+	<h1 align="center">Семейный кинотеатр</h1>
+	<h2 align="center">"КИНОКОТЯ"</h2>
+	<br>
+	<h2 align="center">Список сеансов</h2>
+	{% for i in data %}
+		<br>
+		<form method="POST" action="/booking">
+			<button type="submit" name="submit" value="{{i[0] + ' начало в ' + i[1][:-3] + '.' + i[2]}}" class="button">{{'Фильм: ' + i[0] + '\n'+ 'Начало: ' + i[1][:-3] + '\n' + 'Свободно:' + i[2] }}</button>
+		</form>
+	{% endfor %}
+</body>

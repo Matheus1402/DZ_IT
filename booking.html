@@ -1,0 +1,16 @@
+<html>
+<head>
+	<title>Главное меню</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='menu_style.css') }}">
+</head>
+<body style="background: no-repeat top/100% url('/static/images/background.jpg');">
+	<h1 align="center" style="margin-top:17%;">Бронирование сеанса</h1>
+	<br>
+	<h2 align="center">Ваш сеанс: {{data}}</h2>
+	<form method="POST" action="/answer">
+		<h2 align="center">Как Вас зовут? <input type="text" name = "user_name" size="25" style = "font-size: 25;"></h2>
+		<h2 align="center">Сколько мест? <input type="number" name = "amount" size="50" min="1" max="{{ num }}" style = "font-size: 25;"></h2>
+		<br>
+		<button type="submit" name="submit" value="{{time}}" class="button">Забронировать сеанс</button>
+	</form>
+</body>

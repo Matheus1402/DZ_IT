@@ -1,0 +1,28 @@
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+.button {
+	color: black;
+	background-color: grey;
+	width: 500px;
+	border: 2px solid black;
+	border-radius: 10px;
+	box-shadow: 0.4em 0.4em 5px rgba(122, 122, 122, 0.5);
+	padding: 15px 20px;
+	text-align: center;
+	display: inline-block;
+	font-size: 35px;
+	cursor: pointer;
+	margin-left:35.5%;
+}
+
+.form{
+	display: block;
+	width: 5%;
+	margin-top:20px;
+}

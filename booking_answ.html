@@ -1,0 +1,12 @@
+<html>
+<head>
+	<title>Главное меню</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='menu_style.css') }}">
+</head>
+<body style="background: no-repeat top/100% url('/static/images/background.jpg');">
+	<h1 align="center" style="margin-top:17%;">Сеанс успешно забронирован!</h1>
+	<br>
+	<form method="POST" action="/">
+		<button type="submit" name="submit" value="success" class="button">На главную страницу</button>
+	</form>
+</body>
